@@ -1,0 +1,543 @@
+/* Atlanta Air Duct Cleaning Pro — site styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #1e293b;
+  line-height: 1.65;
+  background: #ffffff;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: #2563eb;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header / Nav */
+header.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #0b2540;
+  border-bottom: 1px solid #123256;
+}
+
+.nav-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-decoration: none;
+  letter-spacing: 0.2px;
+}
+
+.brand span {
+  color: #38bdf8;
+}
+
+nav.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+nav.main-nav a.nav-link {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+nav.main-nav a.nav-link:hover {
+  color: #ffffff;
+}
+
+.nav-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #38bdf8;
+  color: #072338;
+  font-weight: 700;
+  padding: 9px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.nav-phone:hover {
+  background: #0ea5e9;
+}
+
+/* Mobile nav */
+.nav-toggle {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  nav.main-nav .nav-link {
+    display: none;
+  }
+  .nav-wrap {
+    flex-wrap: wrap;
+  }
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  background: #0b2540;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.hero-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 56px 24px 64px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    padding: 36px 20px 40px;
+  }
+}
+
+.hero h1 {
+  font-size: 2.3rem;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.hero p.lead {
+  font-size: 1.08rem;
+  color: #cbd5e1;
+  margin-bottom: 24px;
+}
+
+.hero-image {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #1c3d63;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.98rem;
+}
+
+.btn-primary {
+  background: #38bdf8;
+  color: #072338;
+}
+
+.btn-primary:hover {
+  background: #0ea5e9;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #ffffff;
+  border: 1.5px solid #45658a;
+}
+
+.btn-secondary:hover {
+  border-color: #38bdf8;
+}
+
+.trust-strip {
+  background: #f1f5f9;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 14px 0;
+}
+
+.trust-strip .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  font-size: 0.92rem;
+  color: #334155;
+  text-align: center;
+}
+
+.trust-strip strong {
+  color: #0b2540;
+}
+
+/* Sections */
+section.page-section {
+  padding: 56px 0;
+}
+
+section.page-section.alt {
+  background: #f8fafc;
+}
+
+section.page-section h2 {
+  font-size: 1.65rem;
+  color: #0b2540;
+  margin-bottom: 18px;
+}
+
+section.page-section h3 {
+  font-size: 1.15rem;
+  color: #0b2540;
+  margin-bottom: 8px;
+}
+
+section.page-section p {
+  margin-bottom: 14px;
+  color: #334155;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+.two-col img {
+  border-radius: 10px;
+}
+
+ul.check-list {
+  list-style: none;
+  margin: 0 0 14px 0;
+}
+
+ul.check-list li {
+  padding-left: 28px;
+  position: relative;
+  margin-bottom: 10px;
+  color: #334155;
+}
+
+ul.check-list li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #0ea5e9;
+  font-weight: 700;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 800px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 22px;
+}
+
+.card h3 {
+  margin-bottom: 8px;
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 18px 0;
+}
+
+.price-table th,
+.price-table td {
+  text-align: left;
+  padding: 12px 14px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.price-table th {
+  background: #0b2540;
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+.price-table td {
+  font-size: 0.95rem;
+  color: #334155;
+}
+
+/* FAQ */
+.faq-item {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 20px 22px;
+  margin-bottom: 14px;
+}
+
+.faq-item h3 {
+  color: #0b2540;
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+}
+
+.faq-item p {
+  margin-bottom: 0;
+}
+
+/* Services list */
+.service-block {
+  border-bottom: 1px solid #e2e8f0;
+  padding: 34px 0;
+}
+
+.service-block:first-of-type {
+  padding-top: 0;
+}
+
+.service-block:last-of-type {
+  border-bottom: none;
+}
+
+.service-block h2 {
+  margin-bottom: 12px;
+}
+
+/* Contact page */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 44px;
+}
+
+@media (max-width: 800px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.info-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 18px;
+}
+
+.info-box h3 {
+  color: #0b2540;
+  margin-bottom: 6px;
+}
+
+form.lead-form {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 26px;
+}
+
+form.lead-form label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0b2540;
+  margin-bottom: 6px;
+  margin-top: 14px;
+}
+
+form.lead-form label:first-child {
+  margin-top: 0;
+}
+
+form.lead-form input,
+form.lead-form textarea,
+form.lead-form select {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+form.lead-form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+form.lead-form button {
+  margin-top: 20px;
+  width: 100%;
+  background: #0b2540;
+  color: #ffffff;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+form.lead-form button:hover {
+  background: #123256;
+}
+
+/* Bottom CTA band */
+.cta-band {
+  background: #0b2540;
+  color: #ffffff;
+  padding: 46px 0;
+  text-align: center;
+}
+
+.cta-band h2 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.cta-band p {
+  color: #cbd5e1;
+  margin-bottom: 22px;
+}
+
+/* Footer */
+footer.site-footer {
+  background: #071a2e;
+  color: #94a3b8;
+  padding: 40px 0 26px;
+  font-size: 0.9rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 760px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+footer.site-footer h4 {
+  color: #e2e8f0;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+footer.site-footer a {
+  color: #94a3b8;
+  text-decoration: none;
+}
+
+footer.site-footer a:hover {
+  color: #ffffff;
+}
+
+footer.site-footer ul {
+  list-style: none;
+}
+
+footer.site-footer ul li {
+  margin-bottom: 6px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #123256;
+  padding-top: 18px;
+  text-align: center;
+  font-size: 0.82rem;
+}
+
+/* Breadcrumb-ish page intro for service pages */
+.page-hero {
+  background: #0b2540;
+  color: #ffffff;
+  padding: 42px 0;
+}
+
+.page-hero h1 {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.page-hero p {
+  color: #cbd5e1;
+  max-width: 700px;
+}
+
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 800px) {
+  .compare-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.compare-grid .card h3 {
+  color: #0b2540;
+}
